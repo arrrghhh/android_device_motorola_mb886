@@ -9,7 +9,6 @@ TARGET_SCREEN_WIDTH := 720
 TARGET_SCREEN_HEIGHT := 1280
 
 # Release name
-<<<<<<< HEAD:carbon.mk
 PRODUCT_RELEASE_NAME := mb886
 PRODUCT_NAME := carbon_mb886
 
