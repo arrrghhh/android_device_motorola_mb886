@@ -40,35 +40,13 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=320
 
-# graphics, xda thread 2243812, suggested by Codex01
-PRODUCT_PROPERTY_OVERRIDES += \
-	video.accelerate.hw=1 \
-	windowsmgr.max_events_per_sec=150
-
-# ril, xda thread 2243812, suggested by Codex01
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.ril.hsxpa=3 \
-	ro.ril.gprsclass=12 \
-	ro.ril.hep=1 \
-	ro.ril.enable.dtm=1 \
-	ro.ril.hsdpa.category=28 \
-	ro.ril.enable.a53=1 \
-	ro.ril.enable.3g.prefix=1 \
-	ro.ril.htcmaskw1.bitmask=4294967295 \
-	ro.ril.htcmaskw1=14449 \
-	ro.ril.hsupa.category=9 \
-	ro.ril.disable.power.collapse=1
-
-# power management, xda thread 2243812, suggested by Codex01
-PRODUCT_PROPERTY_OVERRIDES += \
-	pm.sleep_mode=1
-
 #telephony
 PRODUCT_PROPERTY_OVERRIDES += \
 	telephony.lteOnGsmDevice=1 \
-	ro.telephony.ril.v3=signalstrength
+	telephony.lteOnCdmaDevice=0 \
+	ro.telephony.default_network=9
 
-$(call inherit-product, device/motorola/msm8960-common/idc/idc.mk)
-$(call inherit-product, device/motorola/msm8960-common/keychars/keychars.mk)
-$(call inherit-product, device/motorola/msm8960-common/keylayout/keylayout.mk)
-$(call inherit-product-if-exists, vendor/motorola/mb886/mb886-vendor.mk)
+$(call inherit-product, device/motorola/qcom-common/idc/idc.mk)
+$(call inherit-product, device/motorola/qcom-common/keychars/keychars.mk)
+$(call inherit-product, device/motorola/qcom-common/keylayout/keylayout.mk)
+$(call inherit-product, vendor/motorola/mb886/mb886-vendor.mk)

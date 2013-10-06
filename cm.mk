@@ -1,16 +1,16 @@
 ## Specify phone tech before including full_phone
-$(call inherit-product, vendor/carbon/config/common_gsm.mk)
+$(call inherit-product, vendor/cm/config/gsm.mk)
 
 # Inherit some common CM stuff. 
-$(call inherit-product, vendor/carbon/config/common_phone.mk)
+$(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 720
 TARGET_SCREEN_HEIGHT := 1280
 
 # Release name
-PRODUCT_RELEASE_NAME := mb886
-PRODUCT_NAME := carbon_mb886
+PRODUCT_RELEASE_NAME := MB886
+PRODUCT_NAME := cm_mb886
 
 $(call inherit-product, device/motorola/mb886/full_mb886.mk)
 
